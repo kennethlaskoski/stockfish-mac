@@ -231,7 +231,7 @@
                      sideLength:(CGFloat)sideLength
 {
     int letter = sq % 8;
-    int number = sq / 8;
+    long number = sq / 8;
     CGFloat l, t;
     if (self.boardIsFlipped) {
         l = left + (7 - letter) * sideLength;

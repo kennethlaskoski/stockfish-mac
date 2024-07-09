@@ -12,19 +12,19 @@
 
 + (NSString *)description:(SFMSquare)sq {
     int letter = sq % 8;
-    int number = sq / 8;
-    return [NSString stringWithFormat:@"%c%d", 65 + letter, number + 1];
+    long number = sq / 8;
+    return [NSString stringWithFormat:@"%c%ld", 65 + letter, number + 1];
 }
 
 + (double)distanceFrom:(SFMSquare)from to:(SFMSquare)to {
     int x1 = from % 8;
     int x2 = to % 8;
-    int y1 = from / 8;
-    int y2 = to / 8;
-    
-    int dx = x1 - x2;
-    int dy = y1 - y2;
-    
+    long y1 = from / 8;
+    long y2 = to / 8;
+
+    long dx = x1 - x2;
+    long dy = y1 - y2;
+
     return sqrt(pow(dx, 2) + pow(dy, 2));
 }
 
